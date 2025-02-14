@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://dev.hiringhood.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Hiringhood_files/twk-main.js.download" charset="UTF-8" crossorigin="*"></script><script src="./Hiringhood_files/twk-vendor.js.download" charset="UTF-8" crossorigin="*"></script><script src="./Hiringhood_files/twk-chunk-vendors.js.download" charset="UTF-8" crossorigin="*"></script><script src="./Hiringhood_files/twk-chunk-common.js.download" charset="UTF-8" crossorigin="*"></script><script src="./Hiringhood_files/twk-runtime.js.download" charset="UTF-8" crossorigin="*"></script><script src="./Hiringhood_files/twk-app.js.download" charset="UTF-8" crossorigin="*"></script><script type="text/javascript" async="" src="./Hiringhood_files/js"></script><script async="" src="./Hiringhood_files/gtm.js.download"></script><script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js', });
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NDH4FJ4');</script><script id="tawkId" async="" src="./Hiringhood_files/1fcqemcl9" charset="UTF-8" crossorigin="*"></script><script async="" src="./Hiringhood_files/gtm(1).js.download"></script><script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-N5FKK8K9",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")</script><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Hiringhood"><link rel="manifest" href="https://dev.hiringhood.com/manifest.json"><link rel="shortcut icon" href="https://dev.hiringhood.com/favicon.svg" type="image/svg"><title>Hiringhood</title><link href="./Hiringhood_files/2.75b2eb92.chunk.css" rel="stylesheet"><link href="./Hiringhood_files/main.38163885.chunk.css" rel="stylesheet"><style type="text/css">.multiSelectContainer,.multiSelectContainer *,.multiSelectContainer :after,.multiSelectContainer :before{box-sizing:border-box}.multiSelectContainer{position:relative;text-align:left;width:100%}.disable_ms{opacity:.5;pointer-events:none}.display-none{display:none}.searchWrapper{border:1px solid #ccc;border-radius:4px;min-height:22px;padding:5px;position:relative}.multiSelectContainer input{background:transparent;border:none;margin-top:3px}.multiSelectContainer input:focus{outline:none}.chip{align-items:center;background:#0096fb;border-radius:11px;color:#fff;display:inline-flex;font-size:13px;line-height:19px;margin-bottom:5px;margin-right:5px;padding:4px 10px}.chip,.singleChip{white-space:nowrap}.singleChip{background:none;border-radius:none;color:inherit}.singleChip i{display:none}.closeIcon{cursor:pointer;float:right;height:13px;margin-left:5px;width:13px}.optionListContainer{background:#fff;border-radius:4px;margin-top:1px;position:absolute;width:100%;z-index:2}.multiSelectContainer ul{border:1px solid #ccc;border-radius:4px;display:block;margin:0;max-height:250px;overflow-y:auto;padding:0}.multiSelectContainer li{padding:10px}.multiSelectContainer li:hover{background:#0096fb;color:#fff;cursor:pointer}.checkbox{margin-right:10px}.disableSelection{opacity:.5;pointer-events:none}.highlightOption{background:#0096fb;color:#fff}.displayBlock{display:block}.displayNone{display:none}.notFound{display:block;padding:10px}.singleSelect{padding-right:20px}li.groupHeading{color:#908e8e;padding:5px 15px;pointer-events:none}li.groupChildEle{padding-left:30px}.icon_down_dir{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:14px}.icon_down_dir:before{content:"\e803"}.custom-close{display:flex}</style><style type="text/css">/*
+  code is extracted from Calendly's embed stylesheet: https://assets.calendly.com/assets/external/widget.css
+*/
+
+.calendly-inline-widget,
+.calendly-inline-widget *,
+.calendly-badge-widget,
+.calendly-badge-widget *,
+.calendly-overlay,
+.calendly-overlay * {
+    font-size:16px;
+    line-height:1.2em
+}
+
+.calendly-inline-widget iframe,
+.calendly-badge-widget iframe,
+.calendly-overlay iframe {
+    display:inline;
+    width:100%;
+    height:100%
+}
+
+.calendly-popup-content {
+    position:relative
+}
+
+.calendly-popup-content.calendly-mobile {
+    -webkit-overflow-scrolling:touch;
+    overflow-y:auto
+}
+
+.calendly-overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    z-index:9999;
+    background-color:#a5a5a5;
+    background-color:rgba(31,31,31,0.4)
+}
+
+.calendly-overlay .calendly-close-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0
+}
+
+.calendly-overlay .calendly-popup {
+    box-sizing:border-box;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translateY(-50%) translateX(-50%);
+    transform:translateY(-50%) translateX(-50%);
+    width:80%;
+    min-width:900px;
+    max-width:1000px;
+    height:90%;
+    max-height:680px
+}
+
+@media (max-width: 975px) {
+    .calendly-overlay .calendly-popup {
+        position:fixed;
+        top:50px;
+        left:0;
+        right:0;
+        bottom:0;
+        -webkit-transform:none;
+        transform:none;
+        width:100%;
+        height:auto;
+        min-width:0;
+        max-height:none
+    }
+}
+
+.calendly-overlay .calendly-popup .calendly-popup-content {
+    height:100%;
+}
+
+.calendly-overlay .calendly-popup-close {
+    position:absolute;
+    top:25px;
+    right:25px;
+    color:#fff;
+    width:19px;
+    height:19px;
+    cursor:pointer;
+    background:url(https://assets.calendly.com/assets/external/close-icon.svg) no-repeat;
+    background-size:contain
+}
+
+@media (max-width: 975px) {
+    .calendly-overlay .calendly-popup-close {
+        top:15px;
+        right:15px
+    }
+}
+
+.calendly-badge-widget {
+    position:fixed;
+    right:20px;
+    bottom:15px;
+    z-index:9998
+}
+
+.calendly-badge-widget .calendly-badge-content {
+    display:table-cell;
+    width:auto;
+    height:45px;
+    padding:0 30px;
+    border-radius:25px;
+    box-shadow:rgba(0,0,0,0.25) 0 2px 5px;
+    font-family:sans-serif;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    font-size:14px;
+    color:#fff;
+    cursor:pointer
+}
+
+.calendly-badge-widget .calendly-badge-content.calendly-white {
+    color:#666a73
+}
+
+.calendly-badge-widget .calendly-badge-content span {
+    display:block;
+    font-size:12px
+}
+
+.calendly-spinner {
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%);
+    text-align:center;
+    z-index:-1
+}
+
+.calendly-spinner>div {
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background-color:#e1e1e1;
+    border-radius:50%;
+    vertical-align:middle;
+    -webkit-animation:calendly-bouncedelay 1.4s infinite ease-in-out;
+    animation:calendly-bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+
+.calendly-spinner .calendly-bounce1 {
+    -webkit-animation-delay:-0.32s;
+    animation-delay:-0.32s
+}
+
+.calendly-spinner .calendly-bounce2 {
+    -webkit-animation-delay:-0.16s;
+    animation-delay:-0.16s
+}
+
+@-webkit-keyframes calendly-bouncedelay {
+    0%,80%,100% {
+        -webkit-transform:scale(0);
+        transform:scale(0)
+    } 
+    
+    40%{
+        -webkit-transform:scale(1);
+        transform:scale(1)
+    }
+}
+
+@keyframes calendly-bouncedelay{ 
+    0%,80%,100% {
+        -webkit-transform:scale(0);
+        transform:scale(0)
+    }
+    
+    40% {
+        -webkit-transform:scale(1);
+        transform:scale(1)
+    }
+}</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style><style data-jss="" data-meta="PrivateTabIndicator">
+.jss3 {
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jss4 {
+  background-color: #3f51b5;
+}
+.jss5 {
+  background-color: #f50057;
+}
+.jss6 {
+  right: 0;
+  width: 2px;
+  height: 100%;
+}
+</style><style data-jss="" data-meta="MuiTabs">
+.MuiTabs-root {
+  display: flex;
+  overflow: hidden;
+  min-height: 48px;
+  -webkit-overflow-scrolling: touch;
+}
+.MuiTabs-vertical {
+  flex-direction: column;
+}
+.MuiTabs-flexContainer {
+  display: flex;
+}
+.MuiTabs-flexContainerVertical {
+  flex-direction: column;
+}
+.MuiTabs-centered {
+  justify-content: center;
+}
+.MuiTabs-scroller {
+  flex: 1 1 auto;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+.MuiTabs-fixed {
+  width: 100%;
+  overflow-x: hidden;
+}
+.MuiTabs-scrollable {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.MuiTabs-scrollable::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width:599.95px) {
+  .MuiTabs-scrollButtonsDesktop {
+    display: none;
+  }
+}
+</style><style data-jss="" data-meta="MuiTab">
+.MuiTab-root {
+  padding: 6px 12px;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.875rem;
+  max-width: 264px;
+  min-width: 72px;
+  box-sizing: border-box;
+  min-height: 48px;
+  text-align: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  white-space: normal;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+@media (min-width:600px) {
+  .MuiTab-root {
+    min-width: 160px;
+  }
+}
+.MuiTab-labelIcon {
+  min-height: 72px;
+  padding-top: 9px;
+}
+.MuiTab-labelIcon .MuiTab-wrapper > *:first-child {
+  margin-bottom: 6px;
+}
+.MuiTab-textColorInherit {
+  color: inherit;
+  opacity: 0.7;
+}
+.MuiTab-textColorInherit.Mui-selected {
+  opacity: 1;
+}
+.MuiTab-textColorInherit.Mui-disabled {
+  opacity: 0.5;
+}
+.MuiTab-textColorPrimary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #3f51b5;
+}
+.MuiTab-textColorPrimary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.MuiTab-textColorSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTab-textColorSecondary.Mui-selected {
+  color: #f50057;
+}
+.MuiTab-textColorSecondary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.MuiTab-fullWidth {
+  flex-grow: 1;
+  max-width: none;
+  flex-basis: 0;
+  flex-shrink: 1;
+}
+.MuiTab-wrapped {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.MuiTab-wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss9 {
+  color: #757575;
+  margin: 0 1px;
+  padding: 6px 12px;
+  font-size: large;
+  min-width: 120px;
+  text-transform: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.jss9.Mui-selected {
+  color: white;
+  background-color: #4d6cd9;
+}
+.jss10 .MuiTabs-indicator {
+  display: none;
+}
+</style><style data-emotion="css" data-s=""></style><script charset="utf-8" src="./Hiringhood_files/twk-chunk-bf24a88e.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-71978bb6.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-f1565420.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-2d0b383d.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-48f3b594.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-4fe9d5dd.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-2d0b9454.js.download"></script><script charset="utf-8" src="./Hiringhood_files/twk-chunk-24d8db78.js.download"></script><style type="text/css">#mvb4fsq1qcgg1739503133107 {outline:none !important;
+visibility:visible !important;
+resize:none !important;
+box-shadow:none !important;
+overflow:visible !important;
+background:none !important;
+opacity:1 !important;
+filter:alpha(opacity=100) !important;
+-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important;
+-mz-opacity:1 !important;
+-khtml-opacity:1 !important;
+top:auto !important;
+right:0px !important;
+bottom:0px !important;
+left:auto !important;
+position:fixed !important;
+border:0 !important;
+min-height:0px  !important;
+min-width:0px  !important;
+max-height:none  !important;
+max-width:none  !important;
+padding:0px !important;
+margin:0px !important;
+-moz-transition-property:none !important;
+-webkit-transition-property:none !important;
+-o-transition-property:none !important;
+transition-property:none !important;
+transform:none !important;
+-webkit-transform:none !important;
+-ms-transform:none !important;
+width:auto !important;
+height:auto  !important;
+display:none !important;
+z-index:2000000000 !important;
+background-color:transparent !important;
+cursor:none !important;
+float:none !important;
+border-radius:unset !important;
+pointer-events:auto !important;
+clip:auto !important;
+color-scheme:light !important;}#mvb4fsq1qcgg1739503133107.widget-hidden {display: none !important;}#mvb4fsq1qcgg1739503133107.widget-visible {display: block !important;}
+@media print{
+ #mvb4fsq1qcgg1739503133107.widget-visible { 
+display: none !important;
+ }
+}</style><script src="./Hiringhood_files/emojione.min.js.download" type="text/javascript" async="" defer=""></script><script src="./Hiringhood_files/emojione.min.js.download" type="text/javascript" async="" defer=""></script><style type="text/css">@keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-moz-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-webkit-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}#p5en8aa0l0581739503133434.open{animation : tawkMaxOpen .25s ease!important;}@keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-moz-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-webkit-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}#p5en8aa0l0581739503133434.closed{animation: tawkMaxClose .25s ease!important}</style></head><body><noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDH4FJ4&gtm_auth=&gtm_preview=&gtm_cookies_win=x"
+        height="0" width="0" style="display:none;visibility:hidden" id="tag-manager"></iframe></noscript><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5FKK8K9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="MuiGrid-root css-m6mv07"><div class="style_header-wrapper__1kOQH"><div class="style_header__2lGhW"><div class="style_logo-wrapper__3ZY3a"><a href="https://dev.hiringhood.com/"><img src="./Hiringhood_files/logo-color.afef2e01.svg" alt="Logo" class="style_logo__3s9eD"></a></div><div class="style_header-menu__1mZxA"><div class="style_menu-items__2ZlDU"><div class="style_menu-item__1A_W5 style_menu-item-active__1OKzp"><a href="https://dev.hiringhood.com/">Home</a></div><div class="style_menu-item__1A_W5 "><a href="https://dev.hiringhood.com/contests">Hiring Contests</a></div><div class="style_menu-item__1A_W5 "><a href="https://dev.hiringhood.com/hotlist">Hot-list</a></div><div class="style_menu-item__1A_W5 "><a href="https://dev.hiringhood.com/aboutUs">About Us</a></div></div><div class="style_menu-icon__1Na3H"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ylescl" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="MenuIcon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div></div><div class="style_header-buttons__26aZA"><a href="https://dev.hiringhood.com/login"><button value="Sign In" class="button button-primary style_header-login-button__1Da3h">Sign In</button></a></div></div></div><div class="MuiGrid-root MuiGrid-container css-1j44bai"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1g1m068"><h4 class="MuiTypography-root MuiTypography-h4 css-63ok3g">Harness The <h4 class="MuiTypography-root MuiTypography-h4 css-1bpw53m">Power</h4> Of The Crowd To Fill Job Openings</h4><p class="MuiTypography-root MuiTypography-body1 css-9l3uo3">Accelerated, Precision hiring with Technology</p><div class="MuiGrid-root MuiGrid-item css-3pv2fj"><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root button button-primary css-1hw9j7s" tabindex="0" type="button">Schedule a demo<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-1g71318"><div class="MuiGrid-root MuiGrid-container css-tzs92q"><div class="accelerating-hiring-image-container" style="width: 40%;"><div class="overlay"></div><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1wrv6bd">Accelerated Hiring</h6><img src="./Hiringhood_files/ah1.d3e7be9c.png" alt="Slide 0" class="accelerating-hiring-image"></div><div class="accelerating-hiring-image-container" style="width: 25%;"><div class="overlay"></div><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1b8ou5y">P</h6><img src="./Hiringhood_files/ah3.06d01bd4.png" alt="Slide 1" class="accelerating-hiring-image"></div><div class="accelerating-hiring-image-container" style="width: 25%;"><div class="overlay"></div><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1b8ou5y">T</h6><img src="./Hiringhood_files/ah2.d1ab5a17.png" alt="Slide 2" class="accelerating-hiring-image"></div></div></div></div><div class="MuiGrid-root MuiGrid-grid-xs-12 css-vz3s30"><h3 class="MuiTypography-root MuiTypography-h3 css-161o50d">What <span class="primary-color">Hiringhood</span> does?</h3><img src="./Hiringhood_files/image4.7745074d.png" width="70%"></div><div class="MuiGrid-root MuiGrid-grid-xs-12 css-macjbx" style="padding: 10px;"><h3 class="MuiTypography-root MuiTypography-h3 css-u92o75">Challenges we <span class="primary-color">solve</span></h3><img src="./Hiringhood_files/Front.e4fadcc2.png" width="70%"><p class="MuiTypography-root MuiTypography-body1 css-vadqqc">International IT Industry alone <span class="primary-color">losses $3 trillion/annum</span> over 79 Million unfilled job positions</p></div><div class="MuiGrid-root MuiGrid-container css-1bpoib3"><h3 class="MuiTypography-root MuiTypography-h3 css-1dyefv9">Our <span class="primary-color">Clients</span></h3><div class="MuiGrid-root MuiGrid-item css-80k2lb"><div class="slick-slider slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 18240px; opacity: 1; transform: translate3d(-3420px, 0px, 0px); transition: -webkit-transform 5000ms linear;"><div data-index="43" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/datalink.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="42" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/constructn.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="41" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/bude.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="40" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/freeflow.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="39" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/visnet.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="38" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/sureify.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="37" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/isf.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="36" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/aheadrace.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="35" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/harsco.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="34" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/proarch.webp" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="33" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/acl-digital.jpeg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="32" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/knotsolution.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="31" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/blumetra.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="30" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/kofax.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="29" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/locuz.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="28" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/pacteraedge.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="27" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/nslhub.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="26" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/Okoders.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="25" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/Dalhyd_Logo.jpg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="24" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/atmecs_global.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="23" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/constructionSpecialities_logo.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="22" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/techsophy_logo.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="21" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/datalink.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="20" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/constructn.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="19" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/bude.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="18" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/freeflow.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="17" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/visnet.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="16" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/sureify.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="15" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/isf.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="14" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/aheadrace.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="13" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/harsco.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="12" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/proarch.webp" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="11" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/acl-digital.jpeg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="10" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/knotsolution.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="9" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/blumetra.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="8" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/kofax.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/locuz.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/pacteraedge.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/nslhub.svg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/Okoders.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/Dalhyd_Logo.jpg" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/atmecs_global.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/constructionSpecialities_logo.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 380px;"><div><img class="logos" src="./Hiringhood_files/techsophy_logo.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/datalink.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/constructn.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/bude.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div><div data-index="-4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 380px;"><div><img class="logos" src="./Hiringhood_files/freeflow.png" tabindex="-1" style="width: 100%; display: inline-block;"></div></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button></div></div></div><div class="MuiGrid-root css-wrmhfn"><h3 class="MuiTypography-root MuiTypography-h3 css-18h9l83">News <span class="primary-color">&amp;</span> Awards </h3><div class="MuiGrid-root css-1eqg8k8"><div class="slick-slider slick-initialized" dir="ltr"><div class="reverseArrow"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeLarge css-h1oho" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="ArrowBackIosIcon"><path d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"></path></svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button></div><div class="slick-list"><div class="slick-track" style="width: 25823px; opacity: 1; transform: translate3d(-1519px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">News &amp; Events</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Participated in Hysea</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">The Hyderabad Software Enterprise Association conducted an event at Novotel on February 14, 2024.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/Hysea.54dc3fdf.png"></div></div></div></div></div></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Rising Star Startup Award</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">ITTL - India Tech Talent League by MyAnotomy Integration has awarded the Startup Excellence Awards 2023</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/RisingStar.116c5e5f.jpg"></div></div></div></div></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">T-Spark Award</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Empowering Telangana's innovation ecosystem since 2017, driving inclusive growth and entrepreneurship under state leadership</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/T-Spark.2d9f2f4a.png"></div></div></div></div></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Winner of ISF 2023</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">India Startup Festival catalyses entrepreneurship, aligning with GOI initiatives, drawing 10,000+ startups to Bengaluru, driving innovation for an Atmanirbhar Bharat.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IndiaStartup.88fddd77.png"></div></div></div></div></div></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">T - Angel Cohort - 5</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">T-Angel, a 100-day program for revenue-generating startups to secure their first investment, launched today at T-Hub with Cohort No. 5, featuring 13 participating startups.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/TAngel.ddca528b.png"></div></div></div></div></div></div><div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">iDream Entrepreneur talks</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Big news at Hiringhood! Introducing Recruiter ML: a turbocharged virtual recruiter finding perfect matches fast. Our CEO, Sarath Babu Yandrapalli, spilled all on iDream</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IdreamEntrepreneur.3ac9becb.png"></div></div></div></div></div></div><div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Eenadu Article</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Our CEO, Sarath Babu Yandrapalli, Spilled on Eenadu regarding accelerated hiring to employers through hiringhood</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IdreamEntrepreneur2.0d367884.png"></div></div></div></div></div></div><div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">News &amp; Events</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Seed Round Closed</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Seed round funding has been provided to Hiringhood by Venakan Info Solutions</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/seedroundImage.8f0350ad.jpg"></div></div></div></div></div></div><div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">News &amp; Events</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Participated in Hysea</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">The Hyderabad Software Enterprise Association conducted an event at Novotel on February 14, 2024.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/Hysea.54dc3fdf.png"></div></div></div></div></div></div><div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Rising Star Startup Award</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">ITTL - India Tech Talent League by MyAnotomy Integration has awarded the Startup Excellence Awards 2023</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/RisingStar.116c5e5f.jpg"></div></div></div></div></div></div><div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">T-Spark Award</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Empowering Telangana's innovation ecosystem since 2017, driving inclusive growth and entrepreneurship under state leadership</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/T-Spark.2d9f2f4a.png"></div></div></div></div></div></div><div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Our Awards</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Winner of ISF 2023</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">India Startup Festival catalyses entrepreneurship, aligning with GOI initiatives, drawing 10,000+ startups to Bengaluru, driving innovation for an Atmanirbhar Bharat.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IndiaStartup.88fddd77.png"></div></div></div></div></div></div><div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">T - Angel Cohort - 5</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">T-Angel, a 100-day program for revenue-generating startups to secure their first investment, launched today at T-Hub with Cohort No. 5, featuring 13 participating startups.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/TAngel.ddca528b.png"></div></div></div></div></div></div><div data-index="12" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">iDream Entrepreneur talks</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Big news at Hiringhood! Introducing Recruiter ML: a turbocharged virtual recruiter finding perfect matches fast. Our CEO, Sarath Babu Yandrapalli, spilled all on iDream</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IdreamEntrepreneur.3ac9becb.png"></div></div></div></div></div></div><div data-index="13" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">Events &amp; News</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Eenadu Article</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Our CEO, Sarath Babu Yandrapalli, Spilled on Eenadu regarding accelerated hiring to employers through hiringhood</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/IdreamEntrepreneur2.0d367884.png"></div></div></div></div></div></div><div data-index="14" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">News &amp; Events</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Seed Round Closed</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">Seed round funding has been provided to Hiringhood by Venakan Info Solutions</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/seedroundImage.8f0350ad.jpg"></div></div></div></div></div></div><div data-index="15" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1519px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root css-4ftbzd"><div class="MuiGrid-root MuiGrid-container MuiGrid-grid-md-10 css-zmjdo9"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-d730wr"><div class="MuiGrid-root css-1dpugx6"><h5 class="MuiTypography-root MuiTypography-h5 css-134b0ao">News &amp; Events</h5></div><div class="MuiGrid-root css-g6ifw6"><img height="150" src="./Hiringhood_files/leaf-left.408c5f1f.png"><h4 class="MuiTypography-root MuiTypography-h4 css-1ut7tvo">Participated in Hysea</h4><img height="150" src="./Hiringhood_files/leaf-right.34e7cbfc.png"></div><h6 class="MuiTypography-root MuiTypography-h6 css-1aw2l1q">The Hyderabad Software Enterprise Association conducted an event at Novotel on February 14, 2024.</h6></div><div class="MuiGrid-root MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1blpm4r"><img height="230rem" src="./Hiringhood_files/Hysea.54dc3fdf.png"></div></div></div></div></div></div></div></div><div class="forwardArrow"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeLarge css-h1oho" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="ArrowForwardIosIcon"><path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path></svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button></div><ul class="slick-dots" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li><li class=""><button>5</button></li><li class=""><button>6</button></li><li class=""><button>7</button></li><li class=""><button>8</button></li></ul></div></div></div><div class="MuiGrid-root css-1c0pese"><h3 class="MuiTypography-root MuiTypography-h3 css-oqyag4">Testimonials</h3><img class="quote-reverse" src="./Hiringhood_files/quote-reverse.ff62e5e1.png"><div class="MuiTabs-root"><div class="MuiTabs-scroller MuiTabs-fixed" style="overflow: hidden;"><div class="MuiTabs-flexContainer MuiTabs-centered" role="tablist"><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9 Mui-selected" tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper">Vendor</span><span class="MuiTouchRipple-root"></span></button><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9" tabindex="-1" type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper">Clients</span><span class="MuiTouchRipple-root"></span></button><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9" tabindex="-1" type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper">Job Seekers</span><span class="MuiTouchRipple-root"></span></button></div><span class="jss3 jss4 MuiTabs-indicator" style="left: 572.737px; width: 120px;"></span></div></div><div class="MuiGrid-root css-1wq722n"><div class="MuiGrid-root css-1dpugx6"><div class="MuiGrid-root css-aexynk"><div class="slick-slider slick-initialized" dir="ltr" style="z-index: 9;"><button type="button" data-role="none" class="slick-arrow slick-prev slick-disabled" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 1338px; opacity: 1; transform: translate3d(0px, 0px, 0px);"><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 446px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root MuiGrid-grid-xs-10 css-1i7vm7a"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root testimonial-card css-1t3b43h"><p class="MuiTypography-root MuiTypography-body2 MuiTypography-alignJustify hide-scroll-bar css-1njs2df">It has been a very encouraging journey until now. We have closed a few positions and received good bounties as well.We are looking forward to working on different skills and achieving more closures.Thanks for all the coordination and for being informative all the time; it has helped us a lot.</p><div class="MuiGrid-root css-ndn36o"><img class="testimonial-logo" src="data:image/png;base64,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"><div><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">Apolis</h6><span class="MuiTypography-root MuiTypography-caption css-1v2gfp5">CEO of Apolis</span></div></div></div></div></div></div></div><div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 446px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root MuiGrid-grid-xs-10 css-1i7vm7a"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root testimonial-card css-1t3b43h"><p class="MuiTypography-root MuiTypography-body2 MuiTypography-alignJustify hide-scroll-bar css-1njs2df">I wanted to express my deepest gratitude for your support throughout the process. Your dedication to fostering a positive work environment and inclusivity, along with the training sessions and professional development opportunities, are truly appreciated. Special thanks to the HR team for their exceptional communication and responsiveness. Your professionalism, support, and genuine care for vendors' well-being make a significant difference. Thank you for your passion and genuine interest in helping.</p><div class="MuiGrid-root css-ndn36o"><img class="testimonial-logo" src="data:image/png;base64,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"><div><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">Career Hunt</h6><span class="MuiTypography-root MuiTypography-caption css-1v2gfp5">CEO of Career hunt</span></div></div></div></div></div></div></div><div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 446px;"><div><div tabindex="-1" style="width: 100%; display: inline-block;"><div class="MuiGrid-root MuiGrid-grid-xs-10 css-1i7vm7a"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root testimonial-card css-1t3b43h"><p class="MuiTypography-root MuiTypography-body2 MuiTypography-alignJustify hide-scroll-bar css-1njs2df">We feel fortunate to work with you. Among the various third-party companies we've collaborated with, your team stands out for its unwavering support and transparency. Your timely responses and feedback have kept our team happy and productive. We've gained valuable technical and process insights from our collaboration and hope to continue learning from you. Your team members, both front and back-end, are highly supportive and technically proficient. We consider ourselves lucky to have clients and a team like yours; you truly feel like an extension of our own team. Thank you for your constant support</p><div class="MuiGrid-root css-ndn36o"><img class="testimonial-logo" src="./Hiringhood_files/clark.bd046b18.png"><div><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">JFF</h6><span class="MuiTypography-root MuiTypography-caption css-1v2gfp5">CMO of Visionary Apps</span></div></div></div></div></div></div></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next slick-disabled" style="display: block;"> Next</button><ul class="slick-dots" style="display: block;"><li class="slick-active"><button>1</button></li></ul></div></div></div></div><img class="quote-straight" src="./Hiringhood_files/quote-straight.2787bc00.png"></div><div class="MuiGrid-root css-1c0pese"><h3 class="MuiTypography-root MuiTypography-h3 css-oqyag4">Our <span class="primary-color">Success</span> Stories</h3><div class="MuiTabs-root jss10"><div class="MuiTabs-scroller MuiTabs-fixed" style="overflow: hidden;"><div class="MuiTabs-flexContainer MuiTabs-centered" role="tablist"><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9 Mui-selected" tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper">ConstructN.AI</span><span class="MuiTouchRipple-root"></span></button><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9" tabindex="-1" type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper">Aheadrace</span><span class="MuiTouchRipple-root"></span></button><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss9" tabindex="-1" type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper">Proarch</span><span class="MuiTouchRipple-root"></span></button></div><span class="jss3 jss4 MuiTabs-indicator" style="left: 566.237px; width: 142.725px;"></span></div></div><div class="MuiGrid-root css-1gx857k"><h4 class="MuiTypography-root MuiTypography-h4 css-nhspig">Success Story: How Hiringhood Transformed ConstructN's Hiring Process</h4><p class="MuiTypography-root MuiTypography-body1 hide-scroll-bar css-1ck1d">ConstructN.AI, a leading company in the construction industry, was facing a significant challenge in finding the perfect candidate for the position of Lead Machine Learning (ML). Despite exhaustive efforts in the market, they were unable to locate the ideal fit for their requirements. Frustrated by their unsuccessful attempts, they turned to Hiringhood for assistance. 
+
+      Upon contacting Hiringhood, ConstructN.AI was impressed by the swift response and efficiency of our team. Within a day, an agreement was reached, and Hiringhood immediately initiated the sourcing process. Leveraging our extensive network and advanced algorithms, we quickly identified numerous potential candidates, among whom ConstructN.AI found several high-quality profiles.
+      
+      Among the profiles presented by Hiringhood, ConstructN.AI identified Pradeep Borugadda as the standout candidate. Despite the challenges inherent in filling a senior-level position, Pradeep impressed ConstructN.AI throughout the interview process, which spanned three weeks. He not only met but exceeded their expectations, showcasing his expertise by successfully clearing an AI and machine learning-based case study.
+      
+      The rigorous nature of the interview process, comprising multiple rounds and assessments, highlighted the importance of Hiringhood's role in facilitating the recruitment process. As ConstructN.AI's trusted partner, we provided continuous support and delivered exceptional candidates tailored to their specific needs.
+      
+      Pradeep's onboarding process was seamless, thanks to Hiringhood's meticulous attention to detail and commitment to excellence. Within a short span of 2-3 weeks, from the initial sourcing phase to the final selection, ConstructN.AI successfully onboarded Pradeep as their Lead ML, fulfilling a critical requirement within their organization.
+      
+      ConstructN.AI's experience with Hiringhood exemplifies the power of collaboration and the transformative impact of leveraging advanced recruitment solutions. By entrusting their hiring needs to Hiringhood, ConstructN.AI not only found a highly qualified candidate but also achieved significant cost savings, as we successfully closed the candidate within their budget constraints.
+      
+      This success story underscores Hiringhood's dedication to delivering exceptional results and reaffirms our commitment to empowering organizations to build high-performing teams efficiently and effectively. We are proud to have played a pivotal role in ConstructN.AI's success story and look forward to continuing to exceed expectations in all our future endeavours.
+      </p></div></div><div class="MuiGrid-root MuiGrid-container css-1d3bbye"><div class="style_footer__os6By"><div class="style_logo__ahmnK"><img src="./Hiringhood_files/logo-white.7f2f9251.svg" alt="Hiringhood Logo"><p>Hiringhood is a first-in-class recruiters aggregation marketplace technology platform, powered by AI/ML for accelerated hiring. <br><br> We are the first premium bounty hunting &amp; crowd sourcing recruitment company.</p></div><div class="style_footer-wrapper__EUWgi"><div class="style_information__2M0oR"><div class="style_footer-item-title__WSitc">Information</div><ul><div class="style_menu-item-container__3ZYJr"><li class="">About Us</li><li class="">Terms &amp; Conditions</li><li class="">Privacy Policy</li><li class="">Refund Policy</li><li class="">Careers With Us</li><li class="">Sitemap</li><li class="">Contact Us</li><li class="">FAQs</li></div></ul></div><div class="style_recruiters__38w2v"><div class="style_footer-item-title__WSitc">Recruiters</div><ul><div class="style_menu-item-container__3ZYJr"><li class="">Search Jobs</li><li class="">Login</li><li class="style_footer-item-disabled__2PVat">Create Job Alert</li><li class="style_footer-item-disabled__2PVat">Report A Problem</li><li class="">Hiringhood Blogs</li><li class="style_footer-item-disabled__2PVat">Mobile Site</li></div></ul></div><div class="style_support__OB_BZ"><div class="style_support-title__3TJiy">Support</div><ul><div><li>Hiringhood, T-Hub 2.0, #20, Inorbit Mall Rd, Vittal Rao Nagar, Madhapur, Hyderabad, Hyderabad 500081</li></div></ul><div class="style_social-icons__1HhOe"><div class="style_social-icon__ZnFoW"><a href="https://www.facebook.com/hiringhood/?locale=fr_CA" target="_blank" rel="noopener noreferrer"><img src="./Hiringhood_files/facebook.7de50d5e.svg" alt="Facebook"></a></div><div class="style_social-icon__ZnFoW"><a href="https://x.com/hiringhood" target="_blank" rel="noopener noreferrer"><img src="./Hiringhood_files/twitter.e650f019.svg" alt="Twitter"></a></div><div class="style_social-icon__ZnFoW"><a href="https://www.instagram.com/hiringhood/" target="_blank" rel="noopener noreferrer"><img src="./Hiringhood_files/instagram.afb74b68.svg" alt="instagram"></a></div><div class="style_social-icon__ZnFoW"><a href="https://www.linkedin.com/company/hiringhood/mycompany/" target="_blank" rel="noopener noreferrer"><img src="./Hiringhood_files/linkedin.c505ab8c.svg" alt="Linkedin"></a></div></div></div></div><div class="MuiGrid-root MuiGrid-grid-xs-15 MuiGrid-grid-md-28 MuiGrid-grid-lg-0 css-st5249"><hr class="style_separator__3j2rg"></div><div class="style_copyright-container__2g3V1"><p class="style_copyright__K4_3O">© 2025 Hiringhood, All Rights Reserved</p></div></div></div></div><div class="Toastify"></div></div><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],f=0,s=[];f<i.length;f++)a=i[f],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"269a6ecd"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this["webpackJsonph2-web-app"]=this["webpackJsonph2-web-app"]||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var p=c;t()}([])</script><script src="./Hiringhood_files/2.9a65394b.chunk.js.download"></script><script src="./Hiringhood_files/main.ccdbf695.chunk.js.download"></script><script async="" src="./Hiringhood_files/js(1)"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HFC6CHGND6")</script><div id="mvb4fsq1qcgg1739503133107" class="widget-visible"><iframe src="./Hiringhood_files/saved_resource.html" frameborder="0" scrolling="no" width="64px" height="60px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:20px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:60px !important; min-width:64px !important; max-height:60px !important; max-width:64px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:64px !important; height:60px !important; display:block !important; z-index:1000001 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;" id="gk4t6mv6or0g1739503133457" class="" title="chat widget"></iframe><iframe src="./Hiringhood_files/saved_resource(1).html" frameborder="0" scrolling="no" width="350px" height="520px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:10px !important; bottom:90px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:520px !important; min-width:350px !important; max-height:520px !important; max-width:350px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:350px !important; height:520px !important; display:none !important; z-index:1000002 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:5px !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;" id="p5en8aa0l0581739503133434" class="" title="chat widget"></iframe><iframe src="./Hiringhood_files/saved_resource(2).html" frameborder="0" scrolling="no" width="360px" height="55px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:100px; left:auto !important; position:fixed !important; border:0 !important; min-height:55px !important; min-width:360px !important; max-height:55px !important; max-width:360px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:360px !important; height:55px !important; display:none !important; z-index:auto !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;" id="vlq47835si1g1739503133408" class="" title="chat widget"></iframe><iframe src="./Hiringhood_files/saved_resource(3).html" frameborder="0" scrolling="no" width="124px" height="95px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:0px !important; bottom:30px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:95px !important; min-width:124px !important; max-height:95px !important; max-width:124px !important; padding:0 !important; margin:0px 0 0 0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:rotate(0deg) translateZ(0); -webkit-transform:rotate(0deg) translateZ(0); -ms-transform:rotate(0deg) translateZ(0); width:124px !important; height:95px !important; display:none !important; z-index:1000002 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important; -moz-transform:rotate(0deg) translateZ(0); -o-transform:rotate(0deg) translateZ(0); transform-origin:0; -moz-transform-origin:0; -webkit-transform-origin:0; -o-transform-origin:0; -ms-transform-origin:0;" id="eso55651b8lg1739503133387" class="" title="chat widget"></iframe></div></body></html>

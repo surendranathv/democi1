@@ -5,6 +5,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+   # 👇 Also run when a tag is pushed (e.g., v1.0.1, rollback-v1.0.0)
+    tags:
+      - 'v*'
+      - 'rollback-*'  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
